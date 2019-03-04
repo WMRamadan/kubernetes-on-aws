@@ -61,3 +61,23 @@ This gives the output shown below, add the output you get similar to the below t
     "ns-1107.awsdns-10.org"
 ]
 ```
+
+## Create the Kubernetes cluster
+
+Start the Kubernetes cluster using the following command:
+
+```
+kops create cluster \
+--name k8s.yourdomainname.com \
+--zones us-east-1c \
+--master-size t2.micro \
+--node-size t2.micro \
+--state s3://k8s.yourdomainname.com \
+--yes
+```
+
+Waiting a few minutes for the cluster to be ready and then check the cluster status:
+
+```
+kubectl get pods
+```

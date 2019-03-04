@@ -76,8 +76,9 @@ kops create cluster \
 --yes
 ```
 
-Waiting a few minutes for the cluster to be ready and then check the cluster status:
+Wait a few minutes for the cluster to be ready and then check the cluster status:
 
 ```
-kubectl get pods
+kubectl get service
 ```
+

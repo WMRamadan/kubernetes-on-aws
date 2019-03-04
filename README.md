@@ -1,4 +1,4 @@
-# Creating a Kubernetes Clust on AWS
+# Creating a Kubernetes Cluster on AWS
 
 ![kubernetes_aws](./images/kops-aws-1.png)
 

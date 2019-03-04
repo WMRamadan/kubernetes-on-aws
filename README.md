@@ -25,7 +25,7 @@ Create an S3 bucket:
 
     ```
      aws s3api create-bucket --bucket k8s.yourdomainname.com --create-bucket-configuration LocationConstraint=us-east-1
-     ```
+    ```
 
 Version your bucket-in-case you need to revert or recover a previous version:
 

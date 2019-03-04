@@ -40,3 +40,24 @@ export KOPS_STATE_STORE=s3://k8s.yourdomainname.com
 ```
 
 ## DNS Configuration
+
+Generate a Route 53 hosted zone using the AWS CLI:
+
+```
+ID=$(uuidgen) && \
+aws route53 create-hosted-zone \
+--name k8s.yourdomainname.com \
+--caller-reference $ID \
+| jq .DelegationSet.NameServers
+```
+
+This gives the output shown below, add the output you get similar to the below to your DNS records:
+
+```
+[
+    "ns-94.awsdns-11.com",
+    "ns-1962.awsdns-s3.co.uk",
+    "ns-838.awsdns-40.net",
+    "ns-1107.awsdns-10.org"
+]
+```

@@ -79,6 +79,6 @@ kops create cluster \
 Wait a few minutes for the cluster to be ready and then check the cluster status:
 
 ```
-kubectl get service
+kubectl get services
 ```
 
